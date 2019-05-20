@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/clMain"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/transparent">
+
+  <View
+    android:id="@+id/cstViewLeft"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@+id/clSec"
+    app:layout_constraintEnd_toStartOf="@+id/clCircleView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <View
+    android:id="@+id/cstViewRight"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@+id/clSec"
+    app:layout_constraintEnd_toEndOf="@+id/clSec"
+    app:layout_constraintStart_toEndOf="@+id/clCircleView"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/clSec"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    android:background="@drawable/alert_dialog_background"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+      android:id="@+id/tvTitle"
+      android:textStyle="bold"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="48dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      android:gravity="center"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Title"/>
+
+    <TextView
+      android:id="@+id/tvDescription"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      android:gravity="center"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+      tools:text="Description"/>
+
+    <LinearLayout
+      android:id="@+id/llButtonsLayout"
+      style="?android:attr/buttonBarStyle"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      android:gravity="center_horizontal"
+      android:orientation="horizontal"
+      android:visibility="visible"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+      app:layout_constraintVertical_bias="0.0">
+
+      <Button
+        android:id="@+id/btnCancel"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        tools:text="Cancel"/>
+
+      <Button
+        android:id="@+id/btnNeutral"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        tools:text="Neutral"/>
+
+      <Button
+        android:id="@+id/btnConfirm"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        tools:text="Confirm"/>
+
+    </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/clCircleView"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:background="@drawable/background_circle"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
